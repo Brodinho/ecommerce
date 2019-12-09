@@ -6,8 +6,18 @@ namespace Composer\Autoload;
 
 class ComposerStaticInit6a3c9f50037911c9a5f18bad5352019a
 {
-    public static $fallbackDirsPsr4 = array (
-        0 => __DIR__ . '/..' . '/hcodebr/php-classes/src',
+    public static $prefixLengthsPsr4 = array (
+        'H' => 
+        array (
+            'Hcode\\' => 6,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'Hcode\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hcodebr/php-classes/src',
+        ),
     );
 
     public static $prefixesPsr0 = array (
@@ -41,7 +51,8 @@ class ComposerStaticInit6a3c9f50037911c9a5f18bad5352019a
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->fallbackDirsPsr4 = ComposerStaticInit6a3c9f50037911c9a5f18bad5352019a::$fallbackDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit6a3c9f50037911c9a5f18bad5352019a::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit6a3c9f50037911c9a5f18bad5352019a::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInit6a3c9f50037911c9a5f18bad5352019a::$prefixesPsr0;
             $loader->classMap = ComposerStaticInit6a3c9f50037911c9a5f18bad5352019a::$classMap;
 
